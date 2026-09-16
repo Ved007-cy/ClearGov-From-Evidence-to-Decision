@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ClearGov
 
 ClearGov is a TypeScript full-stack prototype for evidence-based public service decisions. The solution contains a Next.js web app, a Fastify API, shared contracts, and a deterministic decision engine.
@@ -48,3 +49,7 @@ pnpm db:seed
 ## Notes
 
 This prototype intentionally uses a deterministic rules engine and a demo workflow, not a production database or external AI pipeline. It is designed to be extended safely with real Supabase and review orchestration.
+=======
+# ClearGov-From-Evidence-to-Decision
+Event
+>>>>>>> origin/main

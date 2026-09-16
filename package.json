@@ -1,0 +1,23 @@
+{
+  "name": "cleargov-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.15.0",
+  "scripts": {
+    "dev": "concurrently \"pnpm --dir apps/api dev\" \"pnpm --dir apps/web dev\"",
+    "build": "pnpm --dir packages/contracts build && pnpm --dir packages/decision-engine build && pnpm --dir apps/api build && pnpm --dir apps/web build",
+    "lint": "pnpm -r --filter ./apps/** --filter ./packages/** lint",
+    "typecheck": "pnpm -r --filter ./apps/** --filter ./packages/** typecheck",
+    "test": "vitest run --config vitest.config.ts",
+    "db:migrate": "echo 'Supabase migration step is intentionally documented; use supabase db push when configured.'",
+    "db:seed": "echo 'Seed data is available via the decision-engine fixtures and demo API seed endpoint.'",
+    "security:scan": "echo 'Security scan step is documented; install the project scanners if needed.'"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8",
+    "@types/node": "^22.10.2",
+    "eslint": "^8.57.0"
+  }
+}
